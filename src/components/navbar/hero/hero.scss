@@ -29,12 +29,25 @@
             h2{
                 font-size: 35px;
                 font-weight: bold;
-                color: rebeccapurple;
+                color: white;
                 letter-spacing: 10px;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+                
                 @include mobile {
                     letter-spacing: 8px;
                 }
             }
+
+            @-webkit-keyframes glow {
+                from {
+                  text-shadow: 0 0 5px #414194, 0 0 8px #414194, 0 0 13px #414194, 0 0 13px #414194, 0 0 17px #414194, 0 0 23px #414194, 0 0 27px #414194;
+                }
+                to {
+                  text-shadow: 0 0 5px #0c0c1d, 0 0 12px #242451, 0 0 12px #0c0c1d, 0 0 13px #0c0c1d, 0 0 13px #242451, 0 0 22px #242451, 0 0 23px #242451;
+                }
+              }
 
             h1{
                 font-size: 60px;

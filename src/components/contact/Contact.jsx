@@ -47,18 +47,20 @@ const Contact = () => {
     return (
         <motion.div ref={ref} className="contact" variants={variants} initial="initial" whileInView="animate">
             <motion.div className="textContainer" variants={variants}>
-                <motion.h1 variants={variants}>lets work together</motion.h1>
+                <motion.h1 variants={variants}><motion.b whileHover={{color:"orange"}}>Let's</motion.b> Connect</motion.h1>
                 <motion.div className="item" variants={variants}>
                     <h2>Mail</h2>
-                    <span>hello@react.dev</span>
+                    <motion.a href="mailto:karandeep1413@gmail.com" whileHover={{color:"orange"}}><span>karandeep1413@gmail.com</span></motion.a>
+                    
                 </motion.div>
                 <motion.div className="item" variants={variants}>
                     <h2>Address</h2>
-                    <span>hello street NYC</span>
+                    <motion.a href="https://maps.app.goo.gl/DvnWrQkGxdpQdhXx5" whileHover={{color:"orange"}}><span>New Delhi, India</span></motion.a>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
                     <h2>Phone</h2>
-                    <span>+1 234 5768</span>
+                    <motion.a href="tel:901-541-7112" whileHover={{color:"orange"}}><span>+91 9015417112</span></motion.a>
+                    
                 </motion.div>
             </motion.div>
             <div className="formContainer">

@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="hero">
             <div className="wrapper">
                 <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                    <motion.h2 variants={textVariants}>KARANDEEP SINGH</motion.h2>
+                    <motion.div variants={textVariants}><motion.h2 initial={{scale:1}} animate={{scale:1.1}} transition={{duration:3, repeat:Infinity, repeatType:"mirror"}}>KARANDEEP SINGH</motion.h2></motion.div>
                     <motion.h1 variants={textVariants}>Web Developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
                         <a href={"#Portfolio"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}>See the Latest Works</motion.button></a>
