@@ -46,13 +46,14 @@ const Hero = () => {
                     <motion.h2 variants={textVariants}>KARANDEEP SINGH</motion.h2>
                     <motion.h1 variants={textVariants}>Web Developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <motion.button variants={textVariants}>See the Latest Works</motion.button>
-                        <motion.button variants={textVariants}>Contact Me</motion.button>
+                        <a href={"#Portfolio"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}>See the Latest Works</motion.button></a>
+                        <a href={"#Contact"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}> Contact Me </motion.button></a>
                     </motion.div>
-                    <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
+                    {/* this scroll div is just to make button clickable */}
+                    <div className="scroll"><a href={"#Portfolio"}><motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" /></a></div>
                 </motion.div>
             </div>
-            <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Python Developer Gamer</motion.div>extContainer
+            <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Python Developer Gamer</motion.div>
         <div className="imageContainer">
             <img src="/karan.png" alt="" />
         </div>
