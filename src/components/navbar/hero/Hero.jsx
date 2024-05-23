@@ -1,5 +1,6 @@
-import { animate, motion } from "framer-motion"
+import { animate, motion, useScroll, useTransform } from "framer-motion"
 import "./hero.scss"
+import { useRef } from "react"
 
 const sliderVariants = {
     initial: {
@@ -35,14 +36,36 @@ const textVariants = {
             duration:2,
             repeat:Infinity
         }
+    },
+    initialImg:{
+        opacity:0,
+        y:500,
+    },imgAnimate:{
+        y:0,
+        opacity:1,
+        transition:{
+            duration:1,
+            staggerChildren:0.1,
+        }
+
     }
 }
 
 const Hero = () => {
+
+    const ref = useRef()
+
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset:["start start", "end start"]
+    })
+
+    const yBg = useTransform(scrollYProgress, [0,1], ["0%", "500%"])
+
     return (
         <div className="hero">
             <div className="wrapper">
-                <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
+                <motion.div className="textContainer" variants={textVariants} initial="initial" whileInView="animate" style={{x:yBg, animate:{type:"staggerChildren"}}}>
                     <motion.div variants={textVariants}><motion.h2 initial={{scale:1}} animate={{scale:1.1}} transition={{duration:3, repeat:Infinity, repeatType:"mirror"}}>KARANDEEP SINGH</motion.h2></motion.div>
                     <motion.h1 variants={textVariants}>Web Developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
@@ -54,8 +77,8 @@ const Hero = () => {
                 </motion.div>
             </div>
             <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Python Developer Gamer</motion.div>
-        <div className="imageContainer">
-            <img src="/karan.png" alt="" />
+        <div className="imageContainer" >
+            <motion.img src="/karan.png" alt="" variants={textVariants} initial="initialImg" whileInView="imgAnimate" style={{y:yBg, animate:{type:"staggerChildren"}}} />
         </div>
         </div>
     )

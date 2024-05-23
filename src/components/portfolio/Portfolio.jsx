@@ -1,12 +1,12 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./portfolio.scss"
 import{motion, useScroll, useSpring, useTransform} from "framer-motion"
 
 const items = [
     {
         id:1,
-        title:"react commerce",
-        img:"https://images.pexels.com/photos/22638802/pexels-photo-22638802/free-photo-of-sol-de-congreso.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        title:"My Portfolio",
+        img:"./portfolio1.png",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
     },
     {
@@ -17,14 +17,14 @@ const items = [
     },
     {
         id:3,
-        title:"My Portfolio",
+        title:"react",
         img:"https://images.pexels.com/photos/24029820/pexels-photo-24029820/free-photo-of-a-person-sitting-on-the-steps-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
     },
     {
         id:4,
         title:"Python Game",
-        img:"https://images.pexels.com/photos/18129477/pexels-photo-18129477/free-photo-of-smiling-blonde-woman-sitting-with-guitar-on-grass.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        img:"python_game.png",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
     },
 ];
@@ -33,6 +33,7 @@ const items = [
 const Single = ({ item }) => {
 
     const ref = useRef();
+    const [isOpen, setIsOpen] = useState(false);
 
     const {scrollYProgress} = useScroll({target:ref,
         //  offset:["start start", "end start"]
@@ -44,7 +45,9 @@ const Single = ({ item }) => {
         <section >
             <div className="container">
                 <div className="wrapper">
-                    <div className="imageContainer" ref={ref}><img src={item.img} alt="" /></div>
+                    <div className="imageContainer" ref={ref}>
+                        <img src={item.img} alt="" />
+                    </div>
                     
                     <motion.div className="textContainer" style={{y}}>
                        <h2  >{item.title}</h2>
