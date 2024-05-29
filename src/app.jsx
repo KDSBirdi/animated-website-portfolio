@@ -3,7 +3,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
 import Hero from "./components/navbar/hero/Hero";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/navbar/navbar.jsx";
 import Parallax from "./components/navbar/parallax/Parallax";
 import Services from "./components/navbar/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
