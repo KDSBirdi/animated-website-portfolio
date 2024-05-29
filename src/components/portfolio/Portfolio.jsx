@@ -7,25 +7,32 @@ const items = [
         id:1,
         title:"My Portfolio",
         img:"./portfolio1.png",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
+        desc:"Made a Portfolio website for myself using React, Framer-Motion.",
+        repo:"https://github.com/KDSBirdi/animated-website-portfolio",
     },
+    // {
+    //     id:2,
+    //     title:"Spotify Clone",
+    //     img:"https://images.pexels.com/photos/18338026/pexels-photo-18338026/free-photo-of-big-ben-in-london.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    //     desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
+    //     repo:"https://github.com/KDSBirdi/ping-pong-game",
+        
+    // },
+    // {
+    //     id:3,
+    //     title:"react",
+    //     img:"https://images.pexels.com/photos/24029820/pexels-photo-24029820/free-photo-of-a-person-sitting-on-the-steps-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    //     desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
+    //     repo:"https://github.com/KDSBirdi/ping-pong-game",
+        
+    // },
     {
         id:2,
-        title:"Spotify Clone",
-        img:"https://images.pexels.com/photos/18338026/pexels-photo-18338026/free-photo-of-big-ben-in-london.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
-    },
-    {
-        id:3,
-        title:"react",
-        img:"https://images.pexels.com/photos/24029820/pexels-photo-24029820/free-photo-of-a-person-sitting-on-the-steps-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
-    },
-    {
-        id:4,
-        title:"Python Game",
+        title:"Ping Pong Game",
         img:"python_game.png",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non, quibusdam quidem porro, perferendis delectus labore tempore repudiandae suscipit saepe impedit explicabo alias enim minus, officia optio inventore reprehenderit itaque",
+        desc:"In this project i used two python libraries 'Turtle' and 'PyGame'. This is just a basic project i built to make my understanding better and get used to python. ",
+        repo:"https://github.com/KDSBirdi/ping-pong-game",
+        
     },
 ];
 
@@ -52,7 +59,7 @@ const Single = ({ item }) => {
                     <motion.div className="textContainer" style={{y}}>
                        <h2  >{item.title}</h2>
                        <p>{item.desc}</p>
-                       <button>See Demo</button>
+                       <a href={item.repo}><motion.button whileHover={{background:"white", color:"black", scale:1.2}}>See Demo</motion.button></a>
                     </motion.div>
                 </div>
             </div>

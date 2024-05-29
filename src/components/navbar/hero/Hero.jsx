@@ -69,11 +69,11 @@ const Hero = () => {
                     <motion.div variants={textVariants}><motion.h2 initial={{scale:1}} animate={{scale:1.1}} transition={{duration:3, repeat:Infinity, repeatType:"mirror"}}>KARANDEEP SINGH</motion.h2></motion.div>
                     <motion.h1 variants={textVariants}>Web Developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <a href={"#Portfolio"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}>See the Latest Works</motion.button></a>
+                        <a href={"#Projects"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}>See the Latest Works</motion.button></a>
                         <a href={"#Contact"}><motion.button variants={textVariants} whileHover={{background:"white", color:"black"}}> Contact Me </motion.button></a>
                     </motion.div>
                     {/* this scroll div is just to make button clickable */}
-                    <div className="scroll"><a href={"#Portfolio"}><motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" /></a></div>
+                    <div className="scroll"><a href={"#About"}><motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" /></a></div>
                 </motion.div>
             </div>
             <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Python Developer Gamer</motion.div>

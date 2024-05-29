@@ -30,8 +30,8 @@ const variants = {
 
     const items = [
         "Homepage",
-        "About",
         "Projects",
+        "About",
         "Contact",
     ]
 

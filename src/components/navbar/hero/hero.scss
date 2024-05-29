@@ -104,6 +104,8 @@
 }
 
 .slidingTextContainer{
+    z-index: 0;
+
     position: absolute;
     font-size: 50vh;
     bottom: -50px;
@@ -111,5 +113,4 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
-    z-index: 0;
 }
